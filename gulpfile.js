@@ -8,15 +8,15 @@ var gulp        = require('gulp'),
     livereload  = require('gulp-livereload'),
     tinylr      = require('tiny-lr'),
     cleanCSS    = require('gulp-clean-css'),
-    fontAwesome = require('node-font-awesome')
+    fontAwesome = require('node-font-awesome');
 
-    server      = tinylr()
+    server      = tinylr();
     path        = require('path');
 
 var paths = {
     source: './src',
     destination: './dist',
-    root: '/'
+    root: '.'
 };
 
 
@@ -62,7 +62,7 @@ gulp.task('jade', function() {
         }))
         .pipe(debug(
             {
-                title: 'jaded:'
+                title: 'jaded :'
             }
         ))
         .pipe(gulp.dest(paths.root))
