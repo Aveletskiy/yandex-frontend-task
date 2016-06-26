@@ -1,0 +1,71 @@
+.flex-able(@direction,@multiLine,@horizontalAlign,@verticalAlign){
+  display: flex;
+  flex-flow: @direction @multiLine;
+  justify-content:@horizontalAlign;
+  align-items: @verticalAlign;
+  overflow: auto;
+}
+@fullScreen: 100%;
+@forNav: 7%;
+@forFooter: 7%;
+@contentHeight: @fullScreen - (@forNav + @forFooter);
+
+html, body{
+  height: @fullScreen;
+  width: @fullScreen;
+  padding: 0;
+  margin: 0;
+}
+.right-pane,.left-pane{
+  height: @contentHeight;
+}
+
+.header{
+  height: @forNav;
+}
+
+.footer-rel{
+  height: @forFooter;
+}
+
+.row-less{
+  height: inherit;
+}
+
+.content{
+  height: @contentHeight;
+  .pre-body{
+    display: flex;
+    align-items: center;
+    height: 20%;
+    line-height: inherit;
+    overflow: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+  }
+  .center-img{
+    margin: 10px 20px;
+  }
+  .body{
+    height: 70%;
+  }
+  .post-body{
+    height: 10%;
+  }
+
+}
+
+
+.horz-img{
+  margin: 10px 10px;
+  display: inline;
+  align-self: flex-start;
+}
+.left-pane{
+  overflow-y: scroll;
+}
+
+.flexy{
+
+  .flex-able(row,nowrap,flex-start,center)
+}

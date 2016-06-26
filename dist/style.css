@@ -34,6 +34,7 @@ img
     width: 100px;
     height: 100px;
 
+    background: #F3F8FA;
     border: 5px solid #87b7ce;
     border-radius: 100%;
 
@@ -51,6 +52,7 @@ img
     width: 100px;
     height: 100px;
 
+    background: #F7F5F8;
     border: 5px solid #b09eb7;
     border-radius: 100%;
 
@@ -78,7 +80,7 @@ img
 
     color: #b09eb7;
     border-radius: 100%;
-    background: #fff;
+    background: #F7F5F8;
 
     align-items: center;
     justify-content: center;

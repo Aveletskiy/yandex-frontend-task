@@ -1,0 +1,30 @@
+//begin header and nav
+nav.navbar.navbar-default
+    .container-fluid
+        //Brand and toggle get grouped for better mobile display
+        .navbar-header
+            button.navbar-toggle.collapsed(type="button",
+                data-toggle="collapse",data-target="#",aria-expanded="false")
+                span.sr-only Toggle navigation
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+            a.navbar-brand(href="#") Brand
+        //Collect the nav links, forms, and other content for toggling
+        .collapse.navbar-collapse
+            ul.nav.navbar-nav
+                li.active
+                    a(href="#") Sample Menu 1
+                        span.sr-only (current)
+                li
+                    a(href="#") Sample Menu 2
+                li
+                    a(href="#") Sample Menu 3
+                li
+                    a(href="#") Sample Menu 4
+            form.navbar-form.navbar-right(role="search")
+                .form-group.form-group-sm
+                        input.form-control(type="text",placeholder="Search")
+                button.btn.btn-default.btn-md
+                    span.fa.fa-user
+//end header and nav

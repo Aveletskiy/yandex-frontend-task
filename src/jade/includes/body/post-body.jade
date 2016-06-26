@@ -1,0 +1,18 @@
+//begin post-body
+.post-body
+    .nav
+        ul.pagination.pull-left
+            li.disabled
+                a(href="#",aria-label="Previous")
+                    span(aria-hidden="true") &laquo;
+            li.active
+                a(href="#") 1
+            - var n = 2
+            while n < 5
+                li
+                    a(href="#") #{n++}
+            li
+                a(href="#", aria-label="Next")
+                    span(aria-hidden="true") &raquo;
+
+////end post-body

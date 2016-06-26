@@ -1,0 +1,24 @@
+doctype html
+html(lang=ru)
+    head
+        meta(charset='utf-8')
+        link(href='css/bootstrap.css',rel='stylesheet')
+        link(href='css/style.css',rel='stylesheet')
+        link(href='css/font-awesome.css',rel='stylesheet')
+    body
+        header.header
+            include ./includes/header.jade
+
+        .col-md-2.left-pane
+            include ./includes/left-pane.jade
+
+        .col-md-8.content
+            include ./includes/body/pre-body.jade
+            include ./includes/body/content.jade
+            include ./includes/body/post-body.jade
+
+        .col-md-2.right-pane
+            include ./includes/right-pane
+
+        footer.col-md-12.footer-rel
+            include ./includes/footer.jade
