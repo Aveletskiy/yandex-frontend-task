@@ -5,9 +5,41 @@
   align-items: @verticalAlign;
   overflow: auto;
 }
+
+.circle(@background,@border){
+  position: relative;
+  z-index: 0;
+  display: flex;
+  box-sizing: border-box;
+  width: 100px;
+  height: 100px;
+  background: @background;
+  border: 5px solid @border;
+  border-radius: 100%;
+  align-items: center;
+  justify-content: center;
+  margin: 5px auto;
+}
+
+.mini-circle(@z-index,@offset,@size){
+  display: flex;
+  box-sizing: border-box;
+  position: absolute;
+  z-index: @z-index;
+  right: @offset;
+  bottom: @offset;
+  width: @size;
+  height: @size;
+  border-radius: 100%;
+}
+
 @fullScreen: 100%;
 @forNav: 7%;
 @forFooter: 7%;
+@unNumberedFillColor:#f3f8fa;
+@unNumberedBorderColor:#87b7ce;
+@numberedFillColor:#f7f5f8;
+@numberedBorderColor:#b09eb7;
 @contentHeight: @fullScreen - (@forNav + @forFooter);
 
 html, body{
@@ -15,7 +47,22 @@ html, body{
   width: @fullScreen;
   padding: 0;
   margin: 0;
+
+  font-family: 'Droid Sans Mono';
+  font-size: 18px;
+  font-weight: 500;
+  font-style: normal;
+  font-variant: normal;
+  line-height: 26px;
+
+  counter-reset: circle-2-counter;
 }
+
+.hidden
+{
+  visibility: hidden;
+}
+
 .right-pane,.left-pane{
   height: @contentHeight;
 }
@@ -45,6 +92,13 @@ html, body{
   }
   .center-img{
     margin: 10px 20px;
+    z-index: 100;
+
+    box-sizing: border-box;
+    width: 65%;
+    height: 65%;
+
+    border-radius: 50%;
   }
   .body{
     height: 70%;
@@ -54,7 +108,6 @@ html, body{
   }
 
 }
-
 
 .horz-img{
   margin: 10px 10px;
@@ -68,4 +121,30 @@ html, body{
 .flexy{
 
   .flex-able(row,nowrap,flex-start,center)
+}
+
+.circle-unnumbered{
+  .circle(@unNumberedFillColor,@unNumberedBorderColor);
+}
+
+.circle-numbered{
+  .circle(@numberedFillColor,@numberedBorderColor);
+  &:after{
+    .mini-circle(3,-2px,40%);
+    font-size: 1em;
+    font-weight: bold;
+    content: counter(circle-2-counter);
+    counter-increment: circle-2-counter;
+    color: @numberedBorderColor;
+    background: @numberedFillColor;
+    align-items: center;
+    justify-content: center;
+  }
+  &:before{
+    .mini-circle(2,-7px,50%);
+    content: '';
+    border: 5px solid @numberedBorderColor;
+    border-top: 5px solid transparent;
+    border-left: 5px solid transparent;
+  }
 }

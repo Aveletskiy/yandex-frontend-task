@@ -15,7 +15,8 @@ var gulp        = require('gulp'),
 
 var paths = {
     source: './src',
-    destination: './dist'
+    destination: './dist',
+    root: '/'
 };
 
 
@@ -55,7 +56,7 @@ gulp.task('less',function(){
 });
 
 gulp.task('jade', function() {
-    gulp.src(paths.source+'/jade/_index.jade')
+    gulp.src(paths.source+'/jade/index.jade')
         .pipe(jade({
             pretty: true
         }))
@@ -64,7 +65,7 @@ gulp.task('jade', function() {
                 title: 'jaded:'
             }
         ))
-        .pipe(gulp.dest(paths.destination+'/'))
+        .pipe(gulp.dest(paths.root))
         .pipe( livereload( server ));
 });
 

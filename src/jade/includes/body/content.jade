@@ -1,10 +1,15 @@
 //begin content
 .body.text-center
-    -for(var i=1; i != 10;i++){
-    .col-xs-4.center-block
+    .col-xs-2.center-block
         a(href="#")
-            img.center-img(src="http://lorempixel.com/250/175" alt="image #{i}")
-    }
+            .circle-unnumbered
+                img.center-img(src="http://lorempixel.com/150/150" alt="image #{i}")
+    -for(var i=1; i != 30;i++){
+    .col-xs-2.center-block
+        a(href="#")
+            .circle-numbered
+                img.center-img(src="http://lorempixel.com/150/150" alt="image #{i}")
+    -}
 //end content
 
 
