@@ -1,0 +1,25 @@
+doctype html
+html(lang=ru)
+    head
+        meta(charset='utf-8')
+        link(href='dist/css/bootstrap.css',rel='stylesheet')
+        link(href='dist/css/style.css',rel='stylesheet')
+        link(href='dist/css/font-awesome.css',rel='stylesheet')
+        link(href="//fonts.googleapis.com/css?family=Droid+Sans+Mono",rel="stylesheet")
+    body
+        header.header
+            include ./includes/header.jade
+
+        .col-md-2.left-pane
+            include ./includes/left-pane.jade
+
+        .col-md-8.content
+            include ./includes/body/pre-body.jade
+            include ./includes/body/content.jade
+            include ./includes/body/post-body.jade
+
+        .col-md-2.right-pane
+            include ./includes/right-pane
+
+        footer.col-md-12.footer-rel
+            include ./includes/footer.jade
