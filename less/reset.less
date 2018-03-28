@@ -1,0 +1,44 @@
+body , html {height: 100%;}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: @baseFontFamily;
+	font-weight: 400;
+	font-size: @baseFontSize;
+	line-height: @baseLineHeight;
+	color: @textColor;
+	background: #f0f3f7;
+	min-width:320px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	&.body_fixed {overflow: hidden;}
+}
+
+* {.box-sizing(border-box);}
+
+.pure-g [class *="pure-u"],
+.pure-g {
+	font-family: @baseFontFamily;
+}
+
+.pure-g {
+	margin: 0 -15px;
+	[class *="pure-u"] {padding: 0 15px;}
+} 
+
+.pure-middle {
+	[class *="pure-u"] {
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;		
+	}
+
+	.pure-inner {
+		margin: auto;
+		width: 100%;
+	}
+}

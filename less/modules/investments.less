@@ -1,0 +1,135 @@
+.investments {padding: 18px 0 40px;}
+
+.investments__row {margin: 7px -20px 17px;}
+
+.investments__item {
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 20px 10px;
+	line-height: 1;
+}
+
+.investments__title {
+	display: block;
+	color: @blue;
+	font-weight: 700;
+	font-size: 11px;
+	text-transform: uppercase;
+	margin: 0 0 13px;
+	letter-spacing: 0.4px;
+}
+
+.investments__value {
+	color: #0b234e;
+	font-size: 44px;
+	display: inline-block;
+	vertical-align: bottom;
+	font-weight: 100;
+	margin: 0 5px 0 -4px;
+	letter-spacing: 1.8px;
+}
+
+.investments__currency {
+	display: inline-block;
+	vertical-align: bottom;
+	font-weight: 700;
+	font-size: 15px;
+	text-transform: uppercase;
+	color: #9db2cc;
+	margin: 5px 0;
+}
+
+.investments__socials {
+	display: block;
+	margin: 0 -14px 25px;
+	text-align: center;
+}
+
+.investments__socials-item {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 14px 10px;
+	text-decoration: none;
+	color: @textColor;
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 11px;
+	.transition(0.3s all ease);
+
+	.fa {
+		display: inline-block;
+		vertical-align: middle;
+		margin: -5px 10px 0 0;
+		font-size: 24px;
+		color: @blue;
+	}
+
+	&:hover {color: @blue;}
+
+	.desktop {display: inline-block;}
+	.mobile {display: none;}
+}
+
+.investments__subscribe {
+	text-align: center;
+	display: block;
+	max-width: 485px;
+	margin: 0 auto 10px;
+
+	p {
+		color: #5d73a1;
+		margin: 0 0 20px;
+		font-family: 'Roboto';
+		font-weight: 300;
+	}
+}
+
+.investments__subscribe-input {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 16px 18px;
+	font-size: 10px;
+	font-weight: 700;
+	color: #5d73a1;
+	.placeholder(#5d73a1);
+	background: #fff;
+	width: 260px;
+	margin: 0 7px 10px;
+	.border-radius(4px);
+	border: 0;
+	outline: 0;
+	text-transform: uppercase;
+}
+
+.investments__subscribe-submit {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 12px 39px;
+	margin: 0 7px 10px;
+}
+
+.investments__socials {padding-top: 40px;}
+
+.investments__subscribe {padding-bottom: 30px;}
+
+@media(max-width: 1024px) {
+	.investments__socials-item {
+		.desktop {display: none;}
+		.mobile {display: inline-block;}
+	}
+}
+
+@media(max-width: 768px) {
+	.investments__subscribe {
+		br {display: none;}
+	}
+}
+
+@media(max-width: 479px) {
+	.investments__subscribe-input,
+	.investments__subscribe-submit {
+		display: block;
+		width: 100%;
+		margin: 0 0 10px;
+	}
+}

@@ -1,0 +1,46 @@
+.currency {padding: 0 0 48px;}
+
+.currency__item {
+	display: block;
+	.size(100%;67px);
+	.border-radius(4px);
+	text-align: center;
+	background-repeat: no-repeat;
+	background-position: -13px center;
+	background-color: #fff;
+	white-space: nowrap;
+	margin: 0 0 9px;
+
+	span {
+		display: inline-block;
+		vertical-align: middle;
+		margin: 0 3px;
+		color: #000e2c;
+		font-size: 26px;
+		font-weight: 400;
+		line-height: 67px;
+	}
+}
+
+.currency_btc {background-image: url('@{rootUrl}btc.png')}
+.currency_ltc {background-image: url('@{rootUrl}ltc.png')}
+.currency_eth {background-image: url('@{rootUrl}eth.png')}
+.currency_etc {background-image: url('@{rootUrl}etc.png')}
+.currency_waves {background-image: url('@{rootUrl}waves.png')}
+.currency_usd {background-image: url('@{rootUrl}usd.png')}
+
+.currency__title {
+	display: block;
+	text-align: center;
+	color: @textColor;
+	font-size: 11px;
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 0.5px;
+	margin: 0 0 20px;
+}
+
+@media(max-width: 768px) {
+	.currency__item span {font-size: 22px;}
+	.currency {padding: 0 0 10px;}
+}

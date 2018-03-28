@@ -1,0 +1,30 @@
+.cabinet {
+	padding: 50px 0 90px;
+	position: relative;
+	z-index: 10;
+}
+
+.cabinet__img {
+	display: block;
+	max-width: 100%;
+}
+
+.cabinet__text {
+	display: block;
+	color: #5d74a2;
+	margin: 0 0 25px;
+	font-family: 'Roboto';
+	font-weight: 300;
+}
+
+@media(max-width: 768px) {
+	.cabinet {padding: 30px 0;}
+
+	.cabinet__img {
+		position: absolute;
+		z-index: -1;
+		top: 10%;
+		left: 60%;
+		max-width: 60%;		
+	}
+}

@@ -1,0 +1,82 @@
+.stitches-icon(@x: 0, @y: 0, @width: 0, @height: 0) {
+    background-position: @x @y;
+    width: @width;
+    height: @height;
+}
+
+.icon {
+    background-image: url(spritesheet.png);    background-repeat: no-repeat;
+    display: block;
+
+    &.icon-btc {
+        .stitches-icon(-3px, -3px, 20px, 26px);
+    }
+
+    &.icon-dollar {
+        .stitches-icon(-29px, -3px, 14px, 26px);
+    }
+
+    &.icon-etc {
+        .stitches-icon(-49px, -3px, 14px, 22px);
+    }
+
+    &.icon-eth {
+        .stitches-icon(-69px, -3px, 14px, 22px);
+    }
+
+    &.icon-flag_china {
+        .stitches-icon(-89px, -3px, 24px, 16px);
+    }
+
+    &.icon-flag_japan {
+        .stitches-icon(-119px, -3px, 24px, 16px);
+    }
+
+    &.icon-flag_rus {
+        .stitches-icon(-89px, -25px, 24px, 16px);
+    }
+
+    &.icon-flag_usa {
+        .stitches-icon(-119px, -25px, 24px, 16px);
+    }
+
+    &.icon-github {
+        .stitches-icon(-3px, -47px, 30px, 30px);
+    }
+
+    &.icon-gmail {
+        .stitches-icon(-39px, -47px, 30px, 30px);
+    }
+
+    &.icon-linkedin {
+        .stitches-icon(-75px, -47px, 30px, 30px);
+    }
+
+    &.icon-lock {
+        .stitches-icon(-111px, -47px, 11px, 15px);
+    }
+
+    &.icon-logo {
+        .stitches-icon(-3px, -83px, 145px, 18px);
+    }
+
+    &.icon-ltc {
+        .stitches-icon(-128px, -47px, 18px, 22px);
+    }
+
+    &.icon-stackoverflow {
+        .stitches-icon(-149px, -3px, 30px, 30px);
+    }
+
+    &.icon-tumblr {
+        .stitches-icon(-152px, -39px, 30px, 30px);
+    }
+
+    &.icon-twitter {
+        .stitches-icon(-154px, -75px, 30px, 30px);
+    }
+
+    &.icon-waves {
+        .stitches-icon(-3px, -111px, 22px, 22px);
+    }
+}

@@ -1,0 +1,31 @@
+.base-table {
+	width: 100%;
+	font-family: 'Roboto';
+	font-weight: 300;
+	color: #5d73a1;
+
+	tr {
+		&:nth-child(odd) {
+			.box-shadow(0 1px 7px fade(@blue, 3%));
+			background: #fff;
+			.border-radius(4px);
+		}
+	}
+
+	td {
+		min-width: 222px;
+		padding: 15px 17px;
+		vertical-align: top;
+		letter-spacing: 0.1px;
+
+		&:first-child {color: @textColor;}
+	}
+}
+
+@media(max-width: 768px) {
+	.base-table {
+		font-size: 13px;
+		
+		td {min-width: 0;}
+	}
+}
