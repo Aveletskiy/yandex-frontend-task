@@ -1,0 +1,88 @@
+.countdown-block {
+	display: block;
+	position: relative;
+	margin: 0 0 25px;
+	visibility: hidden;
+}
+
+.countdown-block__title {
+	display: block;
+	margin: 0 0 12px;
+	color: #5d73a1;
+	font-weight: 300;
+	text-transform: uppercase;
+	font-size: 14px;
+	letter-spacing: 0.5px;
+}
+
+.countdownHolder {
+	margin: 0;
+	text-align: left;
+	font-size: 22px;
+	font-weight: 500;
+}
+
+.digit,
+.digit.static {
+	background: #fff;	
+	.size(32px;50px);
+	text-align: center;
+	line-height: 50px;
+	color: #a9bdd6;
+	.box-shadow(none);
+}
+
+.position {
+	.size(32px;50px);
+	.box-shadow(1px 1px 1px fade(@blue, 15%));
+}
+
+.countDiv {
+    position: relative;
+    vertical-align: top;
+    height: 50px;
+    width: 23.5px;
+
+    &:before,
+    &:after {
+    	top: 18px;
+    	.size(3px;3px);
+    	background: @blue;
+    	margin-left: -1.5px;
+    	.box-shadow(none);
+    }
+
+    &:after {top: 28px;}
+}
+
+.countDays,
+.countHours,
+.countMinutes,
+.countSeconds {
+	position: relative;
+	margin-bottom: 30px;
+}
+
+.countUnits {
+	position: absolute;
+	top: 100%;
+	width: 100%;
+	left: 0;
+	z-index: 1;
+	margin: 1px 0;
+	font-family: 'Open Sans';
+	font-size: 12px;
+	color: #436094;
+	text-align: center;
+    letter-spacing: normal;
+}
+
+
+@media(max-width: 768px) {
+	.digit,
+	.digit.static,	
+	.position {
+		.size(25px;40px);
+		line-height: 40px;
+	}
+}

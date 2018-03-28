@@ -1,0 +1,79 @@
+.tab-item, .inner-tab-item {
+  display: none;
+  
+  &.active {
+    display: block;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+  }
+}
+
+.tab-btn-row {
+  display: block;
+  .clearfix();
+  margin: 0 0 18px;
+}
+
+.tab-btn {
+  display: block;
+  float: left;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: @textColor;
+  text-align: center;
+  padding: 9px 16px;
+  letter-spacing: 0.4px;
+  background: transparent;
+  border: 1px solid @blue;
+  margin-right: -1px;
+  .transition(0.3s all ease);
+
+  &:hover,
+  &.active {
+    background: @blue;
+    color: #fff;
+  }
+
+  &:first-child {.border-radius(4px 0 0 4px;)}
+  &:last-child {.border-radius(0 4px 4px 0;)}
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+@media(max-width: 1024px) {
+  .tab-btn {
+    padding: 9px 11px;
+  }
+}
+
+@media(max-width: 568px) {
+  .tab-btn {
+    font-size: 9px;
+    padding: 8px 5px;
+  }
+}

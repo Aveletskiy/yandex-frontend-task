@@ -1,0 +1,149 @@
+@import "../variables.less"; 
+@import "../mixins.less";
+@import "../reset.less";
+@import "../helper-classes.less";
+@import "../texts.less";
+.roadmap {
+	background-image: url('@{rootUrl}chips2.png');
+	background-repeat: no-repeat;
+	background-position: right -20px;
+	padding-bottom: 10px;
+	padding-top: 66px;
+}
+
+.roadmap__row {
+	position: relative;
+	margin-top: 40px;
+	margin-bottom: 300px;
+	height: 243px;
+
+	.progress__bar {
+		width: 72%;
+		margin: 0;
+	}
+}
+
+.roadmap__item {
+	display: inline-block;
+	vertical-align: bottom;
+	position: relative;
+	text-align: left;
+	.translate(0;0);
+	margin-left: 9px;
+	border-left: 1px dotted #a9bdd7;
+	max-width: 26%;
+	left: auto!important;
+	padding: 0 30px 32px 21px;
+	margin-right: 40px;
+
+	.step-icon {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		margin: 0 0 -20px -10px;		
+	}
+
+	&:nth-child(odd) {
+		position: absolute;
+		top: auto;
+		bottom: 12px;
+	}
+
+	&:nth-child(even) {
+		position: absolute;
+		top: 100%;
+		padding-bottom: 0;	
+		padding-top: 42px;
+
+		.step-icon {
+			bottom: auto;
+			top: 0;
+			margin-bottom: 0;
+			margin-top: -12px;
+		}	
+	}
+
+	&:nth-child(1) {left: 0 !important;}
+	&:nth-child(2) {left: 12.8% !important;}
+	&:nth-child(3) {left: 20.3% !important;}
+	&:nth-child(4) {left: 38.6% !important;}
+	&:nth-child(5) {left: 48.5% !important;}
+	&:nth-child(6) {left: 64.6% !important;}
+	&:nth-child(7) {left: 72% !important;}
+
+	&.active {border-left: 1px dotted @blue;}
+}
+
+@media(max-width: 1024px) {
+	.roadmap__item {margin-right: 0;}
+}
+
+@media(min-width: 769px) and (max-width: 1000px) {
+	.roadmap__row {
+		margin-top: 80px;
+	}
+	.roadmap__item {
+		&:nth-child(3) {left: 23.3% !important;}
+	}
+
+}
+
+@media(min-width: 769px) {	
+	.roadmap__row .progress__fill {height: 100%!important;}
+}
+
+@media(max-width: 768px) {
+	.roadmap__row {
+		height: auto;
+		padding-top: 0;
+		margin-top: 30px;
+		margin-bottom: 30px;
+		.clearfix();
+
+		.progress__bar {
+			width: 4px;
+			margin: 0;
+			height: 100%
+		}
+
+		.progress {
+			position: absolute;
+			top: 0;
+			height: 100%;
+			left: 0;
+			width: 4px;
+		}
+	}
+
+	.roadmap__item {
+		max-width: 100%;
+		border-left: 0;
+		border-top: 1px dotted #a9bdd7;
+		padding-top: 10px!important;
+		padding-bottom: 10px!important;
+		float: left;
+		clear: both;
+		top: 0;
+
+		&:nth-child(even),
+		&:nth-child(odd) {
+			position: relative;
+			left: 0!important;
+			bottom: 0;
+		}
+
+		&.active {
+			border-left: 0;
+			border-top: 1px dotted @blue;
+		}
+	}
+
+	.roadmap__item .step-icon {
+		position: absolute;
+		left: -17px;
+		top: -10px;
+		margin: 0;
+	}
+
+	.roadmap__row .progress__fill {width: 100%!important;}
+}

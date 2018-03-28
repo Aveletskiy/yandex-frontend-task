@@ -1,0 +1,373 @@
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+body,
+html {
+  height: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'HelveticaNeueCyr', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #0b234e;
+  background: #f0f3f7;
+  min-width: 320px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body.body_fixed {
+  overflow: hidden;
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.pure-g [class*="pure-u"],
+.pure-g {
+  font-family: 'HelveticaNeueCyr', sans-serif;
+}
+.pure-g {
+  margin: 0 -15px;
+}
+.pure-g [class*="pure-u"] {
+  padding: 0 15px;
+}
+.pure-middle [class*="pure-u"] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+.pure-middle .pure-inner {
+  margin: auto;
+  width: 100%;
+}
+.pull_left {
+  float: left;
+}
+.pull_right {
+  float: right;
+}
+.main-container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1170px;
+  padding: 0 15px;
+}
+.hidden {
+  display: none!important;
+}
+.text_center {
+  text-align: center;
+}
+.text_left {
+  text-align: left;
+}
+.text_right {
+  text-align: right;
+}
+.text_uppercase {
+  text-transform: uppercase;
+}
+.text_blue {
+  color: #0070e3;
+}
+.section {
+  padding-top: 60px;
+}
+.section_darken {
+  background-color: #e6ecf5;
+}
+.section_lighten {
+  background-color: #fff;
+}
+.separator {
+  display: inline-block;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background: #000e2c;
+  padding: 4px 14px;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: 'Roboto';
+  color: #d0e7ff;
+  margin: 0 0 22px;
+  letter-spacing: 0.5px;
+}
+@media (max-width: 1024px) {
+  .section {
+    padding-top: 50px;
+  }
+}
+@media (max-width: 768px) {
+  .section {
+    padding-top: 40px;
+  }
+}
+@media (max-width: 568px) {
+  .section {
+    padding-top: 30px;
+  }
+}
+.h2,
+h2 {
+  display: block;
+  margin: 0 0 16px;
+  line-height: 1.59;
+  font-size: 32px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+}
+.h4,
+h4 {
+  display: block;
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0 0 23px;
+  line-height: 1.3;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+}
+.h6,
+h6 {
+  display: block;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  margin: 0 0 6px;
+  letter-spacing: 0.5px;
+}
+.text-block {
+  color: #5d74a2;
+  font-weight: 300;
+}
+.text-block b {
+  font-weight: 500;
+}
+.text-block p {
+  font-family: 'Roboto';
+  margin: 0 0 22px;
+  line-height: 1.6;
+}
+.details-block {
+  display: block;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  background: #0070e3;
+  color: #fff;
+  padding: 20px 20px 2px;
+  font-size: 13px;
+  margin: 4px 0 87px;
+}
+.details-block:before,
+.details-block:after {
+  content: " ";
+  display: table;
+}
+.details-block:after {
+  clear: both;
+}
+.details-block:before,
+.details-block:after {
+  content: " ";
+  display: table;
+}
+.details-block:after {
+  clear: both;
+}
+.details-block p {
+  margin: 0 0 19px;
+  color: #d0e7ff;
+  font-family: 'Roboto';
+  font-weight: 300;
+  line-height: 1.7;
+}
+@media (max-width: 768px) {
+  .h2,
+  h2 {
+    font-size: 30px;
+    letter-spacing: 0.5px;
+  }
+}
+@media (max-width: 568px) {
+  .h2,
+  h2 {
+    font-size: 24px;
+  }
+  .h4,
+  h4 {
+    font-size: 16px;
+  }
+}
+@media (max-width: 380px) {
+  .h2,
+  h2 {
+    font-size: 18px;
+  }
+}
+.roadmap {
+  background-image: url('images/chips2.png');
+  background-repeat: no-repeat;
+  background-position: right -20px;
+  padding-bottom: 10px;
+  padding-top: 66px;
+}
+.roadmap__row {
+  position: relative;
+  margin-bottom: 280px;
+  height: 243px;
+}
+.roadmap__row .progress__bar {
+  width: 65.5%;
+  margin: 0;
+}
+.roadmap__item {
+  display: inline-block;
+  vertical-align: bottom;
+  position: relative;
+  text-align: left;
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
+  margin-left: 9px;
+  border-left: 1px dotted #a9bdd7;
+  max-width: 26%;
+  left: auto!important;
+  padding: 0 30px 32px 21px;
+  margin-right: 40px;
+}
+.roadmap__item .step-icon {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: 0 0 -20px -10px;
+}
+.roadmap__item:nth-child(odd) {
+  position: absolute;
+  bottom: 12px;
+}
+.roadmap__item:nth-child(even) {
+  position: absolute;
+  top: 100%;
+  padding-bottom: 0;
+  padding-top: 42px;
+}
+.roadmap__item:nth-child(even) .step-icon {
+  bottom: auto;
+  top: 0;
+  margin-bottom: 0;
+  margin-top: -12px;
+}
+.roadmap__item:nth-child(1) {
+  left: 0 !important;
+  height: 170px;
+  margin-top: 69px;
+}
+.roadmap__item:nth-child(2) {
+  left: 12.8% !important;
+}
+.roadmap__item:nth-child(3) {
+  left: 20.2% !important;
+  height: 192px;
+  margin-top: 47px;
+}
+.roadmap__item:nth-child(4) {
+  left: 38.6% !important;
+}
+.roadmap__item:nth-child(5) {
+  left: 49.2% !important;
+  height: 211px;
+  margin-top: 28px;
+}
+.roadmap__item:nth-child(6) {
+  left: 64.6%!important;
+}
+.roadmap__item.active {
+  border-left: 1px dotted #0070e3;
+}
+@media (max-width: 1024px) {
+  .roadmap__item {
+    margin-right: 0;
+  }
+}
+@media (min-width: 769px) {
+  .roadmap__row .progress__fill {
+    height: 100%!important;
+  }
+}
+@media (max-width: 768px) {
+  .roadmap__row {
+    padding-top: 0;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .roadmap__row:before,
+  .roadmap__row:after {
+    content: " ";
+    display: table;
+  }
+  .roadmap__row:after {
+    clear: both;
+  }
+  .roadmap__row:before,
+  .roadmap__row:after {
+    content: " ";
+    display: table;
+  }
+  .roadmap__row:after {
+    clear: both;
+  }
+  .roadmap__row .progress__bar {
+    width: 4px;
+    margin: 0;
+    height: 100%;
+  }
+  .roadmap__row .progress {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    left: 0;
+    width: 4px;
+  }
+  .roadmap__item {
+    max-width: 100%;
+    border-left: 0;
+    border-top: 1px dotted #a9bdd7;
+    padding-top: 10px!important;
+    padding-bottom: 10px!important;
+    float: left;
+    clear: both;
+    top: 0;
+  }
+  .roadmap__item:nth-child(even) {
+    position: relative;
+    left: 0!important;
+  }
+  .roadmap__item.active {
+    border-left: 0;
+    border-top: 1px dotted #0070e3;
+  }
+  .roadmap__item .step-icon {
+    position: absolute;
+    left: -17px;
+    top: -10px;
+    margin: 0;
+  }
+  .roadmap__row .progress__fill {
+    width: 100%!important;
+  }
+}
